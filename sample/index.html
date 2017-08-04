@@ -1,0 +1,41 @@
+<html>
+<head>
+<script src="../tgaimage.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // You can load a TGA image with imageWithURL function.
+  const tga1 = TGAImage.imageWithURL('lena_std.tga')
+
+  // didLoad is Promise.
+  tga1.didLoad.then(() => {
+
+    // You can get img tag with 'image' property
+    document.getElementById('colorImgTag').appendChild(tga1.image)
+
+    // You can get canvas tag with 'canvas' property
+    document.getElementById('colorCanvasTag').appendChild(tga1.canvas)
+  })
+
+  // You can also use src and onload properties
+  const tga2 = new TGAImage()
+  tga2.onload = () => {
+    document.getElementById('grayscaleImgTag').appendChild(tga2.image)
+    document.getElementById('grayscaleCanvasTag').appendChild(tga2.canvas)
+  }
+  tga2.src = 'lena_std_grayscale.tga'
+})
+</script>
+<body>
+<h2>Color TGA</h2><br />
+<h3>img Tag:</h3><br />
+<div id="colorImgTag"></div><br />
+<h3>canvas Tag:</h3><br />
+<div id="colorCanvasTag"></div><br />
+
+<h2>Grayscale TGA</h2><br />
+<h3>img Tag:</h3><br />
+<div id="grayscaleImgTag"></div><br />
+<h3>canvas Tag:</h3><br />
+<div id="grayscaleCanvasTag"></div><br />
+</body>
+</html>
