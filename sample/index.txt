@@ -1,0 +1,20 @@
+Color TGA
+
+img Tag:
+
+
+
+canvas Tag:
+
+
+
+Grayscale TGA
+
+img Tag:
+
+
+
+canvas Tag:
+
+
+
