@@ -14,7 +14,7 @@ npm install tgaimage --save
 ### without npm
 
 ```
-<script src="https://raw.githubusercontent.com/magicien/TGAImage/master/tgaimage.min.js"></script>
+<script src="https://cdn.rawgit.com/magicien/TGAImage/v1.0.0/tgaimage.min.js"></script>
 ```
 
 tgaimage.min.js looks like this;
@@ -32,10 +32,10 @@ const tga1 = TGAImage.imageWithURL('lena_std.tga')
 // didLoad is Promise.
 tga1.didLoad.then(() => {
 
-  // You can get img tag with 'image' property.
+  // You can get an img tag with 'image' property.
   document.getElementById('colorImgTag').appendChild(tga1.image)
 
-  // You can get canvas tag with 'canvas' property.
+  // You can get a canvas tag with 'canvas' property.
   document.getElementById('colorCanvasTag').appendChild(tga1.canvas)
 })
 
