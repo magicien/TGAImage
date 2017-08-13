@@ -167,8 +167,6 @@ class TGAImage {
 
     this._setImage()
     this._deleteBuffer()
-
-    this._resolve()
   }
 
   _readHeader() {
@@ -216,6 +214,9 @@ class TGAImage {
     this._image = new Image()
     this._image.width = this._imageWidth
     this._image.height = this._imageHeight
+    this._image.onload = () => {
+      this._resolve()
+    }
     this._image.src = this._canvas.toDataURL()
   }
 

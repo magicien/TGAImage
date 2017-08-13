@@ -230,8 +230,6 @@ module.exports =
 
 	      this._setImage();
 	      this._deleteBuffer();
-
-	      this._resolve();
 	    }
 	  }, {
 	    key: '_readHeader',
@@ -279,10 +277,15 @@ module.exports =
 	  }, {
 	    key: '_setImage',
 	    value: function _setImage() {
+	      var _this3 = this;
+
 	      this._context.putImageData(this._imageData, 0, 0);
 	      this._image = new Image();
 	      this._image.width = this._imageWidth;
 	      this._image.height = this._imageHeight;
+	      this._image.onload = function () {
+	        _this3._resolve();
+	      };
 	      this._image.src = this._canvas.toDataURL();
 	    }
 	  }, {
