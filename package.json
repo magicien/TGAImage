@@ -1,6 +1,6 @@
 {
   "name": "tgaimage",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "TGA Image Loader for Web browsers",
   "main": "./index.node.js",
   "browser": {

@@ -14,7 +14,7 @@ npm install tgaimage --save
 ### without npm
 
 ```
-<script src="https://cdn.rawgit.com/magicien/TGAImage/v1.0.0/tgaimage.min.js"></script>
+<script src="https://cdn.rawgit.com/magicien/TGAImage/v1.1.0/tgaimage.min.js"></script>
 ```
 
 tgaimage.min.js looks like this;
